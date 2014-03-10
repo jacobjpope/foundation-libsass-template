@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -8,14 +6,14 @@ module.exports = function(grunt) {
 
     sass: {
       options: {
-        includePaths: ['<%%= app %>/bower_components/foundation/scss']
+        includePaths: ['/bower_components/foundation/scss']
       },
       dist: {
         options: {
           outputStyle: 'compressed'
         },
         files: {
-          '<%%= app %>/css/app.css': '<%%= app %>/scss/app.scss'
+          '/css/app.css': '/scss/app.scss'
         }        
       }
     },
@@ -26,11 +24,11 @@ module.exports = function(grunt) {
         tasks: ['sass']
       },
       sass: {
-        files: '<%%= app %>/scss/**/*.scss',
+        files: '/scss/**/*.scss',
         tasks: ['sass']
       },
       livereload: {
-        files: ['<%%= app %>/**/*.html', '!<%%= app %>/bower_components/**', '<%%= app %>/js/**/*.js', '<%%= app %>/css/**/*.css', '<%%= app %>/images/**/*.{jpg,gif,svg,jpeg,png}'],
+        files: ['/**/*.html', '!/bower_components/**', '/js/**/*.js', '/css/**/*.css', '/images/**/*.{jpg,gif,svg,jpeg,png}'],
         options: {
           livereload: true
         }
