@@ -4,25 +4,23 @@ module.exports = function(grunt) {
 
     sass: {
       options: {
-        includePaths: ['/bower_components/foundation/scss']
+        includePaths: ['bower_components/foundation/scss']
       },
       dist: {
         options: {
           outputStyle: 'compressed'
         },
         files: {
-          '/css/app.css': '/scss/app.scss'
+          'css/app.css': 'scss/app.scss'
         }        
       }
     },
-    
+
     watch: {
-      grunt: {
-        files: ['Gruntfile.js'],
-        tasks: ['sass']
-      },
+      grunt: { files: ['Gruntfile.js'] },
+
       sass: {
-        files: '/scss/**/*.scss',
+        files: 'scss/**/*.scss',
         tasks: ['sass']
       },
       livereload: {
@@ -31,7 +29,7 @@ module.exports = function(grunt) {
           livereload: true
         }
       }
-    },
+    }
   });
 
   grunt.loadNpmTasks('grunt-sass');
