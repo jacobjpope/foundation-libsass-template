@@ -21,8 +21,14 @@ module.exports = function(grunt) {
 
       sass: {
         files: 'scss/**/*.scss',
-        tasks: ['sass']
-      }
+        tasks: ['sass'],
+      },
+      livereload: {
+				files: ['<%%= app %>/**/*.html', '!<%%= app %>/bower_components/**', '<%%= app %>/js/**/*.js', '<%%= app %>/css/**/*.css', '<%%= app %>/images/**/*.{jpg,gif,svg,jpeg,png}'],
+				options: {
+					livereload: true
+				}
+			}
     }
   });
 
