@@ -24,7 +24,7 @@ module.exports = function(grunt) {
         tasks: ['sass']
       },
       livereload: {
-        files: ['/**/*.html', '!/bower_components/**', '/js/**/*.js', '/css/**/*.css', '/images/**/*.{jpg,gif,svg,jpeg,png}'],
+        files: ['/*.html', '!/bower_components/**', '/js/**/*.js', '/css/**/*.css', '/images/**/*.{jpg,gif,svg,jpeg,png}'],
         options: {
           livereload: true
         }
